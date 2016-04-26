@@ -12,6 +12,18 @@ Template.hello.helpers({
   counter() {
     return Template.instance().counter.get();
   },
+
+});
+
+Template.time.helpers({
+  getDateCTime(){
+
+    return moment().format('YYYY年mm月DD日')
+  },
+  getDateETime(){
+    moment.locale('en');
+    return moment().format('LLLL');
+  }
 });
 
 Template.hello.events({
