@@ -32,3 +32,15 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
+
+Template.isEnglish.events({
+  'click button'(event, instance) {
+    //if(/^[\u4e00-\u9fa5]+$/i.test($("#txtName").val())){
+    //  alert('这个是中文的名字哦');
+    //}else {
+    //  alert('这个是英文的名字哦');
+    //}
+    if(\p{Han})
+  }
+});

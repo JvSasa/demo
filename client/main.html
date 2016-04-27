@@ -8,10 +8,13 @@
   {{> hello}}
   {{> info}}
 
+    {{> isEnglish}}
+
+
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
+  <button class="btn btn-primary">Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
@@ -27,4 +30,13 @@
 
 <template name="time">
     <label>{{getDateCTime}},{{getDateETime}}</label>
+</template>
+
+
+
+<template name="isEnglish">
+    <div class="form-group">
+        <input type="text" class="form-control" id="txtName" placeholder="Email">
+    </div>
+  <button id="btnOk">按钮</button>
 </template>
