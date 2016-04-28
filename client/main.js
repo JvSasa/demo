@@ -3,9 +3,11 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
+
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   this.counter = new ReactiveVar(0);
+
 });
 
 Template.hello.helpers({
@@ -67,9 +69,12 @@ Template.userTable.events({
   }
 });
 
+
 Template.userTable.helpers({
-  posts:MyCollconnection.find(),
-  getTime(){
-    return moment(this.insertTime).format('llll')
-  }
+  posts:MyCollconnection.find()
 });
+
+
+Template.registerHelper("getDate",function(time,format){
+  return moment(time).format(format);
+})
